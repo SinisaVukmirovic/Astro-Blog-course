@@ -1,0 +1,33 @@
+---
+// interface Props {
+//     title: string;
+//     description: string;
+// }
+
+
+// to make interface Props optional
+// interface Props {
+    //     title?: string;
+    //     description?: string;
+    // }
+
+import MainHead from './MainHead.astro';
+
+// const { title, description } = Astro.props;
+// if props are optional they can have default values
+const { title = 'My Astro Blog About page', description = 'Astro Blog tutorial with CiP ' } = Astro.props;
+
+---
+
+<html lang="en">
+    <!-- <MainHead title={title} description={description}> -->
+    <MainHead {title} {description}>
+
+    </MainHead>
+
+	<body>
+		<slot>
+            Default text
+        </slot>
+	</body>
+</html>
