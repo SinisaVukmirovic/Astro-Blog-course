@@ -3,6 +3,9 @@
   "type": "module",
   "version": "0.0.1",
   "private": true,
+  "browsersList:": [
+    "defaults"
+  ],
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -11,6 +14,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^1.7.1"
+    "astro": "^1.7.1",
+    "postcss": "^8.4.20",
+    "postcss-preset-env": "^7.8.3"
+  },
+  "devDependencies": {
+    "sass": "^1.57.0"
   }
 }
