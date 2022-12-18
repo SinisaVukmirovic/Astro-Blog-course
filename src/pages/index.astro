@@ -16,6 +16,11 @@
 
 import MainLayout from "../layouts/MainLayout.astro";
 
+// const foregroundClr = 'hsl(20, 50%, 50%)';
+// const backgroundClr = 'hsl(200, 80%, 80%)';
+
+const isRed = true;
+
 ---
 
 <!-- <html lang="en">
@@ -51,6 +56,51 @@ import MainLayout from "../layouts/MainLayout.astro";
 	</body>
 </html> -->
 
-<MainLayout title="Home page" description="Home page of my blog">
+<!-- <MainLayout title="Home page" description="Home page of my blog">
 	<h1>Astro Blog tutorial</h1>
+</MainLayout> -->
+
+<!-- <MainLayout title="My Blog"> -->
+	<!-- below is JSX -->
+	<!-- <p style={{
+		backgroundColor: "lime",
+		padding: "2rem"
+	}}>My home page</p>
+</MainLayout> -->
+
+<!-- <MainLayout title="My Blog site">
+	<h1>My Blog site</h1>
+	<p>defined variable colors</p>
+</MainLayout> -->
+
+<MainLayout title="My Blog site">
+	<h1>My Blog site</h1>
+	<!-- <p class="big">defined variable colors</p> -->
+	<p class:list={["big", {red: isRed}]}>defined variable colors</p>
 </MainLayout>
+
+<!-- <style is:global>
+	h1 {
+		font-size: 5rem;
+	}
+</style> -->
+
+<!-- <style define:vars={{ foregroundClr, backgroundClr }}>
+	h1 {
+		font-size: 5rem;
+	}
+	p {
+		font-size: 2rem;
+		background-color: var(--backgroundClr);
+		color: var(--foregroundClr);
+	}
+</style> -->
+
+<style>
+	.big {
+		font-size: 3rem;
+	}
+	.red {
+		color: red;
+	}
+</style>
