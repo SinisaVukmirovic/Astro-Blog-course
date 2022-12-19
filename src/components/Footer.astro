@@ -1,0 +1,12 @@
+<footer>
+    <small>
+        Copyright &copy; 
+        <span id="copyright"></span>
+        | All right reserved
+    </small>
+</footer>
+
+<!-- script inside script tags will be on the client side -->
+<script type="module">
+    document.querySelector('#copyright').textContent = new Date().getFullYear().toString();
+</script>

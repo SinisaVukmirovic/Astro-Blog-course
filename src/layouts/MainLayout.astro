@@ -12,6 +12,8 @@
     // }
 
 import MainHead from './MainHead.astro';
+import Footer from '../components/Footer.astro';
+import Navbar from '../components/Navbar.astro';
 
 // importing global styles
 import '../styles/global.css';
@@ -29,8 +31,12 @@ const { title = 'My Astro Blog About page', description = 'Astro Blog tutorial w
     </MainHead>
 
 	<body>
+        <Navbar />
+
 		<slot>
             Default text
         </slot>
+
+        <Footer />
 	</body>
 </html>
