@@ -1,5 +1,8 @@
 ---
+// icon lib import
 import { Icon } from 'astro-icon';
+// data import
+import navData from '../data/navData';
 ---
 
 <nav aria-label="Primary">
@@ -8,7 +11,9 @@ import { Icon } from 'astro-icon';
             <Icon name="logomark" width="60"/>
         </a>
         <ul>
-
+            {navData.map((item) => 
+                <a href={item.path}>{item.name}</a>
+            )}
         </ul>
     </div>
 </nav>
