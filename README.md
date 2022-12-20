@@ -7,7 +7,7 @@ ___
 
 #### There is a top-level AWAIT in top --- section
 
-##### Anything inside "public" folder is untouched by Astro, it is basically at the root of the server and can be referenced just by this /.. for example "/favicon.svg"
+##### Anything inside "public" folder is untouched by Astro, it is basically at the root of the server and can be referenced just by "/filename" for example "/favicon.svg"
 
 #### Styles in AStro are scope to the components and Astro also uses :where selector which strips of all CSS specificity
 

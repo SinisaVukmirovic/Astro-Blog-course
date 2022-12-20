@@ -1,6 +1,8 @@
 ---
 // icon lib import
 import { Icon } from 'astro-icon';
+// link component
+import Link from './Link.astro';
 // data import
 import navData from '../data/navData';
 ---
@@ -12,7 +14,18 @@ import navData from '../data/navData';
         </a>
         <ul>
             {navData.map((item) => 
-                <a href={item.path}>{item.name}</a>
+                // <a href={item.path}>{item.name}</a>
+                <Link 
+                    text={item.name}
+                    href={item.href}
+                    style='secondary'
+                    isFilled={false}
+                    data-navLink
+                    icon={{
+                        name: 'ic:baseline-assessment',
+                        side: 'right'
+                    }}
+                />
             )}
         </ul>
     </div>
