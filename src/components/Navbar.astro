@@ -5,6 +5,7 @@ import { Icon } from 'astro-icon';
 import Link from './Link.astro';
 // data import
 import navData from '../data/navData';
+
 ---
 
 <nav aria-label="Primary">
@@ -20,7 +21,7 @@ import navData from '../data/navData';
                     href={item.href}
                     style='secondary'
                     isFilled={false}
-                    data-navLink
+                    data-navlink
                     icon={{
                         name: 'ic:baseline-assessment',
                         side: 'right'
@@ -30,3 +31,8 @@ import navData from '../data/navData';
         </ul>
     </div>
 </nav>
+
+<script type="module">
+    // import '../js/nav.js';   // not sure why this path is not working
+    import './src/js/nav.js';
+</script>
