@@ -10,7 +10,7 @@ import navData from '../data/navData';
 
 <nav aria-label="Primary">
     <div class="navbar">
-        <a href="#" class="logomark" aria-label="Go Home">
+        <a href="/" class="logomark" aria-label="Go Home">
             <Icon name="logomark" width="60"/>
         </a>
         <ul>
@@ -18,7 +18,7 @@ import navData from '../data/navData';
                 // <a href={item.path}>{item.name}</a>
                 <Link 
                     text={item.name}
-                    href={item.href}
+                    href={item.path}
                     style='secondary'
                     isFilled={false}
                     data-navlink
