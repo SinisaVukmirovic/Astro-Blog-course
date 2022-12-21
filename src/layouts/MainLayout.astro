@@ -33,9 +33,11 @@ const { title = 'My Astro Blog About page', description = 'Astro Blog tutorial w
 	<body>
         <Navbar />
 
-		<slot>
-            Default text
-        </slot>
+		<main>
+            <slot>
+                Default text
+            </slot>
+        </main>
 
         <Footer />
 	</body>

@@ -1,10 +1,24 @@
 ---
 
 import MainLayout from "../layouts/MainLayout.astro";
+import Link from "../components/Link.astro";
 
 ---
 
 <!-- <MainLayout title="My Astro Blog About page" description="My About Page"> -->
 <MainLayout title="My About page" description="About page of my blog">
-    <p>Hi from About!</p>
+    <!-- <p>Hi from About!</p> -->
+    <section class="container about" aria-label="About Me">
+        <img src="/images/headshot.jpg" alt="Profile picture" width="200" height="330">
+        <!-- images is in public folder which is at a root elem so the above path works -->
+
+        <div class="content">
+            <h1 class="h1">My Blog</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et adipisci, cum expedita laudantium vitae totam dolores non eum natus beatae labore corrupti incidunt esse voluptas officia doloribus rem dolorem, vel quisquam, reprehenderit veritatis consectetur tempore. Sunt eveniet similique aspernatur cupiditate?</p>
+
+            <Link href='mailto:astroblogtut@codinginpublic.com'
+                  style='primary'
+                  text='Contact Me' />
+        </div>
+    </section>
 </MainLayout>
